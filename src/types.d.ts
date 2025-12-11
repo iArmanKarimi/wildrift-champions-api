@@ -7,6 +7,7 @@ type AbilityType =
 
 interface Ability {
 	name: string;
+	icon_url: string;
 	video_url: string;
 	description: string;
 	ability_type: AbilityType;
@@ -30,6 +31,7 @@ interface ChampionHeader {
 interface Champion extends ChampionHeader {
 	role: string;
 	skins: Skin[];
+	intro_video_url: string;
 	difficulty: ChampionDifficulty;
 	abilities: Record<AbilityType, Ability>;
 }
