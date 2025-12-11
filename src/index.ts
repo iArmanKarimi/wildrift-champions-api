@@ -39,6 +39,32 @@ export class WildRiftAPIImpl implements WildRiftAPI {
 		this.championList = champions;
 		return champions;
 	}
+
+	/** Fetch all champions concurrently; stored in championList */
+	async loadChampionsAsync(): Promise<Champion[]> {
+		// Ensure headers are loaded
+		if (this.championHeaders.length === 0) {
+			await this.loadChampionHeaders();
+		}
+
+		// Map headers to fetch promises
+		const fetchPromises = this.championHeaders.map(async (header) => {
+			try {
+				return await this.fetchChampion(header);
+			} catch (err) {
+				console.warn(`Failed to fetch champion ${header.name}:`, err);
+				return null; // fallback for failed fetch
+			}
+		});
+
+		// Wait for all fetches
+		const champions = (await Promise.all(fetchPromises)).filter(
+			(champion): champion is Champion => champion !== null
+		);
+
+		this.championList = champions;
+		return champions;
+	}
 }
 
 export const wildRiftAPI = new WildRiftAPIImpl();
