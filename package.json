@@ -1,0 +1,45 @@
+{
+  "name": "@wildrift/champions-api",
+  "version": "0.1.0",
+  "description": "Provides public Wild Rift champion data including skins, abilities, roles, and difficulty.",
+  "keywords": [
+    "wildrift",
+    "champions",
+    "skins",
+    "abilities",
+    "game",
+    "api",
+    "api-wrapper",
+    "wild-rift",
+    "wr",
+    "wildrift-api",
+    "wildrift-champions"
+  ],
+  "homepage": "https://github.com/iArmanKarimi/wildrift-champions-api#readme",
+  "bugs": {
+    "url": "https://github.com/iArmanKarimi/wildrift-champions-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iArmanKarimi/wildrift-champions-api.git"
+  },
+  "license": "MIT",
+  "author": "Arman Karimi",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "files": [
+    "dist",
+    "data"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
