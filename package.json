@@ -41,5 +41,8 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "ky": "^1.14.1"
   }
 }
