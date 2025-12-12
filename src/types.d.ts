@@ -1,34 +1,34 @@
-type AbilityType =
+export type AbilityType =
 	| 'passive'
 	| 'first'
 	| 'second'
 	| 'third'
 	| 'ultimate';
 
-interface Ability {
+export interface Ability {
 	name: string;
 	icon_url: string;
 	video_url: string;
 	description: string;
 	ability_type: AbilityType;
 }
-interface Skin {
+export interface Skin {
 	name: string;
 	image_url: string;
 }
-declare enum ChampionDifficulty {
+export enum ChampionDifficulty {
 	Easy = 1,
 	Medium,
 	Hard
 }
 
-interface ChampionHeader {
+export interface ChampionHeader {
 	id: string;
 	name: string;
 	image_url: string;
 }
 
-interface Champion extends ChampionHeader {
+export interface Champion extends ChampionHeader {
 	role: string;
 	skins: Skin[];
 	intro_video_url: string;
