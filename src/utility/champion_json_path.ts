@@ -10,7 +10,7 @@ export const championJSONPath = {
 		difficultyValue: ['props', 'pageProps', 'page', 'blades', 1, 'difficulty', 'value'],
 		difficultyName: ['props', 'pageProps', 'page', 'blades', 1, 'difficulty', 'name'],
 		subtitle: ['props', 'pageProps', 'page', 'blades', 1, 'subtitle'],
-		role: ['props', 'pageProps', 'page', 'blades', 1, 'role', 'roles', 0],
+		role: ['props', 'pageProps', 'page', 'blades', 1, 'role', 'roles', 0, 'name'],
 		introVideoUrl: ['props', 'pageProps', 'page', 'blades', 1, 'backdrop', 'background', 'sources', 0, 'src'],
 	},
 
