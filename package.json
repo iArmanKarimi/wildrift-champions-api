@@ -25,15 +25,22 @@
   },
   "license": "MIT",
   "author": "Arman Karimi",
-  "type": "commonjs",
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:run": "vitest run",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "@types/node": "^25.0.1",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
   },
   "files": [
     "dist",
