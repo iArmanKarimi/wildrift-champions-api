@@ -20,31 +20,31 @@ export const championJSONPath = {
 	abilities: {
 		// passive
 		passiveIconUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 0, 'thumbnail', 'url'],
-		passiveVideoUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 0, 'content', 'media', 'sources', 0],
+		passiveVideoUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 0, 'content', 'media', 'sources', 0, "src"],
 		passiveName: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 0, 'label'],
 		passiveDescription: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 0, 'content', 'description', 'body'],
 
 		// Q
 		qIconUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 1, 'thumbnail', 'url'],
-		qVideoUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 1, 'content', 'media', 'sources', 0],
+		qVideoUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 1, 'content', 'media', 'sources', 0, "src"],
 		qName: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 1, 'label'],
 		qDescription: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 1, 'content', 'description', 'body'],
 
 		// W
 		wIconUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 2, 'thumbnail', 'url'],
-		wVideoUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 2, 'content', 'media', 'sources', 0],
+		wVideoUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 2, 'content', 'media', 'sources', 0, "src"],
 		wName: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 2, 'label'],
 		wDescription: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 2, 'content', 'description', 'body'],
 
 		// E
 		eIconUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 3, 'thumbnail', 'url'],
-		eVideoUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 3, 'content', 'media', 'sources', 0],
+		eVideoUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 3, 'content', 'media', 'sources', 0, "src"],
 		eName: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 3, 'label'],
 		eDescription: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 3, 'content', 'description', 'body'],
 
 		// R
 		rIconUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 4, 'thumbnail', 'url'],
-		rVideoUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 4, 'content', 'media', 'sources', 0],
+		rVideoUrl: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 4, 'content', 'media', 'sources', 0, "src"],
 		rName: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 4, 'label'],
 		rDescription: ['props', 'pageProps', 'page', 'blades', 2, 'groups', 4, 'content', 'description', 'body'],
 	},
