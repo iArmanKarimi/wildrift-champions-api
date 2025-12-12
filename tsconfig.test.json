@@ -1,0 +1,11 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"noEmit": true, // do NOT output any compiled files
+		"types": ["vitest/globals"], // make describe/it/expect globally available
+		"allowJs": true, // allow JS-based tests if needed
+		"module": "CommonJS",
+		"moduleResolution": "node"
+	},
+	"include": ["test"] // type-check test folder
+}
