@@ -1,15 +1,16 @@
-import ky from 'ky';
 import type { Champion, ChampionHeader, Ability, AbilityType, Skin } from './types';
 import { getAtPath } from './utility/getAtPath';
 import { extractNextDataJson } from './utility/nextData';
 import { championJSONPath } from './utility/champion_json_path';
-import { constructChampionUrl } from './utility/endpoints';
+import { fetchChampionData } from './utility/fetchChampionData';
+
+
 
 /**
  * Fetch a full champion object from its ChampionHeader.
  */
 export async function fetchChampion(champion: ChampionHeader): Promise<Champion> {
-	const html = await ky.get(constructChampionUrl(champion.id)).text();
+	const html: string = await fetchChampionData(champion);
 	const nextData = extractNextDataJson(html);
 
 	// -------------------
