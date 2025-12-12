@@ -10,6 +10,9 @@ import { fetchChampionData } from './utility/fetchChampionData';
  * Fetch a full champion object from its ChampionHeader.
  */
 export async function fetchChampion(champion: ChampionHeader): Promise<Champion> {
+	if (!champion || !champion.id || !champion.name || !champion.image_url) {
+		throw new Error('Invalid ChampionHeader: id, name, and image_url are required');
+	}
 	const html: string = await fetchChampionData(champion);
 	const nextData = extractNextDataJson(html);
 
