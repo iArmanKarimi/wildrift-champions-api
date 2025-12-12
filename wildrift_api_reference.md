@@ -83,8 +83,11 @@ Fetches all champion headers (basic info).
 fetchChampion(champion: ChampionHeader): Promise<Champion>
 ```
 
-Fetches full champion details from a given header.  
-**Throws** if a network or parsing error occurs.
+Fetches full champion details from a given header.
+
+**Throws:**
+
+- `Error` if a network or parsing error occurs.
 
 ---
 
@@ -93,11 +96,13 @@ Fetches full champion details from a given header.
 ```typescript
 import { fetchChampionHeaders, fetchChampion } from "wildrift-champions-api";
 
-const headers = await fetchChampionHeaders();
-const ahriHeader = headers.find((c) => c.id === "ahri");
-if (ahriHeader) {
-	const ahri = await fetchChampion(ahriHeader);
-	console.log(ahri.name, ahri.role, ahri.abilities);
+async function example() {
+	const headers = await fetchChampionHeaders();
+	const ahriHeader = headers.find((c) => c.id === "ahri");
+	if (ahriHeader) {
+		const ahri = await fetchChampion(ahriHeader);
+		console.log(ahri.name, ahri.role, ahri.abilities);
+	}
 }
 ```
 
@@ -112,6 +117,6 @@ if (ahriHeader) {
 
 ## See Also
 
-- [src/types.d.ts](./src/types.d.ts)
-- [src/fetchChampion.ts](./src/fetchChampion.ts)
-- [src/fetchChampionHeaders.ts](./src/fetchChampionHeaders.ts)
+- [`src/types.d.ts`](./src/types.d.ts)
+- [`src/fetchChampion.ts`](./src/fetchChampion.ts)
+- [`src/fetchChampionHeaders.ts`](./src/fetchChampionHeaders.ts)
