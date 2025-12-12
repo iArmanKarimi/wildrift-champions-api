@@ -22,10 +22,14 @@ export async function fetchChampionHeaders(): Promise<ChampionHeader[]> {
 		// Map each item to a ChampionHeader object
 		return items
 			.map((item: any) => {
-				const id = getAtPath(item, championHeadersJSONPath.slug);
-				const name = getAtPath(item, championHeadersJSONPath.title);
-				const image_url = getAtPath(item, championHeadersJSONPath.image);
-
+				// Extract id from the last segment of action.payload.url
+				let id = undefined;
+				if (item.action && item.action.payload && typeof item.action.payload.url === 'string') {
+					const match = item.action.payload.url.match(/\/champions\/([^\/]+)\//);
+					if (match) id = match[1];
+				}
+				const name = item.title;
+				const image_url = item.media && item.media.url;
 				if (typeof id === 'string' && typeof name === 'string' && typeof image_url === 'string') {
 					return { id, name, image_url };
 				}
