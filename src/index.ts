@@ -16,10 +16,10 @@ import { fetchChampion } from './fetchChampion';
  */
 export class WildRiftAPIImpl implements WildRiftAPI {
 	/** List of champion headers (basic info: id, name, image) */
-	championHeaders: ChampionHeader[] = [];
+	public championHeaders: ChampionHeader[] = [];
 
 	/** List of full champion objects */
-	championList: Champion[] = [];
+	public championList: Champion[] = [];
 
 	/**
 	 * Creates a new WildRiftAPI instance.
