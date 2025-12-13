@@ -1,6 +1,6 @@
 {
   "name": "@wildrift/champions-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Provides public Wild Rift champion data including skins, abilities, roles, and difficulty.",
   "keywords": [
     "wildrift",
