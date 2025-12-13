@@ -22,13 +22,13 @@ A lightweight **TypeScript** library for fetching **League of Legends: Wild Rift
 ## 📦 Installation
 
 ```bash
-npm install wildrift-champions-api
+npm install @wildrift/champions-api
 ```
 
 or
 
 ```bash
-yarn add wildrift-champions-api
+yarn add @wildrift/champions-api
 ```
 
 ---
