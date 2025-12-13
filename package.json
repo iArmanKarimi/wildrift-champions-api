@@ -1,6 +1,6 @@
 {
   "name": "@wildrift/champions-api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Provides public Wild Rift champion data including skins, abilities, roles, and difficulty.",
   "keywords": [
     "wildrift",
@@ -28,8 +28,7 @@
   "license": "MIT",
   "author": "Arman Karimi",
   "type": "module",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup",
@@ -58,8 +57,7 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs"
+      "types": "./dist/index.d.ts"
     }
   }
 }
