@@ -26,9 +26,11 @@
   "license": "MIT",
   "author": "Arman Karimi",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
     "prepare": "npm run build",
     "test": "vitest",
     "test:watch": "vitest --watch",
@@ -43,13 +45,19 @@
     "vitest": "^4.0.15"
   },
   "files": [
-    "dist",
-    "data"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
     "ky": "^1.14.1"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs"
+    }
   }
 }
